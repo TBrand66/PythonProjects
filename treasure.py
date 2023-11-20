@@ -42,3 +42,49 @@ if choice1 == "left":
     print("You get attacked by an angry trout. Game Over.")
 else:
   print("You fell into a hole. Game Over.")
+
+
+###### another method
+treasure = 1
+while True:
+    direction = input('You are to go either right or left! ').lower()
+    if direction == "left":
+        print('You can proceed to the valley of gold')
+    else:
+        print("""Fall into a hole!
+        Game over!!!!!
+        """)
+        treasure = 2
+        break
+
+    phase_two = input("Do you want to swim or wait? ").lower()
+    if phase_two == "swim":
+        print("""You drown!
+        Game over!!!!!
+        """)
+        treasure = 2
+        break
+    else:
+        print("You survived to the treasure door...congrats")
+        phase_three = input('Enter one of the following doors: Blue, Red, Yellow! ').lower()
+        if phase_three == "red":
+            print("""Burned by fire
+            Game Over!!!!.
+            """)
+            treasure = 2
+            break
+        elif phase_three == "blue":
+            print("""Eaten by beasts
+            Game Over!!!
+            """)
+            treasure = 2
+            break
+        elif phase_three == "yellow":
+            print("""You have survived to the treasure
+            Congratulations!!!
+            """)
+            break
+        else:
+            print('Invalid choice. Game Over')
+            treasure = 2
+            break
